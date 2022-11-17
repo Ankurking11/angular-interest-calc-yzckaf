@@ -1,0 +1,104 @@
+<div class="example-container">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Principal Amount"
+      (change)="updatePrincipal($event)"
+    />
+    <span matPrefix>Rs.&nbsp;</span>
+    <span matSuffix>.00</span>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Interest Rate"
+      type="number"
+      (change)="updateInterestRate($event)"
+    />
+    <span matSuffix>%</span>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="No. of months"
+      type="number"
+      (change)="updatePeriod($event)"
+    />
+    <span matSuffix>months</span>
+  </mat-form-field>
+</div>
+
+<button mat-raised-button (click)="calcuateInterest()" color="primary">
+  Calculate
+</button>
+<!--
+<div class="result">
+
+  <p>
+    Month: <p id="demo"></p>
+
+<script>
+let text = "";
+
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+  </p>
+  <p>
+    Earning: {{interestAmount}}
+  </p>
+  <p>
+    New balance: {{totalAmount}}
+  </p>
+</div>-->
+<!--
+<table>
+  <tr>
+    <th>Month&ensp;&ensp;</th>
+    <th>Earning&ensp;&ensp;</th>
+    <th>New balance</th>
+  </tr>
+
+  <script>
+      //int i=1;
+      for(int i=1;i<{{period}};i++)
+      {
+        <tr>
+      <td>i&ensp;&ensp;</td>
+      <td>{{nextInterest()}}&ensp;&ensp;</td>
+      <td>{{newBalance()}}</td>
+    </tr>
+      }
+  </script>-->
+
+  
+  <tr>
+    <td>1&ensp;&ensp;</td>
+    <td>{{interestAmount}}&ensp;&ensp;</td>
+    <td>{{totalAmount}}</td>
+  </tr>
+  
+  <tr>
+    <td>2&ensp;&ensp;</td>
+    <td>{{nextInterest()}}&ensp;&ensp;</td>
+    <td>{{newBalance()}}</td>
+  </tr>
+
+  <tr>
+    <td>3&ensp;&ensp;</td>
+    <td>{{nextInterest()}}&ensp;&ensp;</td>
+    <td>{{newBalance()}}</td>
+  </tr>
+
+  <tr>
+    <td>4&ensp;&ensp;</td>
+    <td>{{nextInterest()}}&ensp;&ensp;</td>
+    <td>{{newBalance()}}</td>
+  </tr>
+
+</table>

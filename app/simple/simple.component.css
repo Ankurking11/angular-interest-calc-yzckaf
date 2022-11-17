@@ -1,0 +1,23 @@
+.example-container {
+  max-width: 50%;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.mat-tab-label {
+  
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+.result {
+  font-family: consolas;
+  margin-top: 12px;
+  border-top: 1px dotted purple;
+  letter-spacing: 2px;
+}
